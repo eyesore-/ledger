@@ -40,5 +40,6 @@ const dessert = [
 const christmasGoodies = dessert.filter( dessert => dessert.holiday === 'Christmas')
 
 console.log('XMAS YUM YUM', christmasGoodies)
-// There will automatically be a space added between 'XMAS YUM YUM' and whatever christmasGoodies represents
+// There will automatically be a space added between
+// 'XMAS YUM YUM' and whatever christmasGoodies represents
 ```
