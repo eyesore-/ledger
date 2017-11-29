@@ -43,3 +43,14 @@ console.log('XMAS YUM YUM', christmasGoodies)
 // There will automatically be a space added between
 // 'XMAS YUM YUM' and whatever christmasGoodies represents
 ```
+
+## Updates
+As we learn more and more about higher order functions I will be updating the repo to include functions like `reduce` and `filter` which each having their own sets of tests. To make sure you are getting any updates made make sure to follow these steps:
+
+1. Add a `remote` repo _syntax:_ `git remote add <name> <url>`
+  - This will be a remote connection to my repo by running the following command: `git remote add upstream https://github.com/eyesore-/ledger`
+  - `upstream` will be the remote name.
+2. To pull from original repo whenever there is changes you will now run:
+`git pull upstream master`
+  - All new changes will be brought down from the original changes and if there are no changes to files that you have changed then there will be no merge conflicts
+  - When working on a project you want to pull often to make sure that you have the most up to date codebase locally.
