@@ -21,7 +21,7 @@ As you work through your code always remember these important 3 questions when d
 
 When using `console.log` adding a string with labeling as the first argument will help out figuring out where in your codebase you are:
 
-``` js
+``` javascript
 const dessert = [
   {
     name: 'Pumpkin Pie',
@@ -49,13 +49,17 @@ As we learn more and more about higher order functions I will be updating the re
 
 1. Add a `remote` repo _syntax:_ `git remote add <name> <url>`
   - This will be a remote connection to my repo by running the following command:
-  ```
+  ``` bash
   git remote add upstream https://github.com/eyesore-/ledger
   ```
   - `upstream` will be the remote name.
 2. To pull from original repo whenever there is changes you will now run:
-```
+``` bash
 git pull upstream master
 ```
   - All new changes will be brought down from the original changes and if there are no changes to files that you have changed then there will be no merge conflicts
   - When working on a project you want to pull often to make sure that you have the most up to date codebase locally.
+3. This will pull and merge the information into your local repo so it will ask you to write a `commit` message.
+4. Once you write and save your `commit` message the new files will be merged into your local repo and you can start working on the method implementations.
+---
+**P.S.** Have fun! 🎈
