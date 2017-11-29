@@ -49,7 +49,9 @@ As we learn more and more about higher order functions I will be updating the re
 
 1. Add a `remote` repo _syntax:_ `git remote add <name> <url>`
   - This will be a remote connection to my repo by running the following command:
-  `git remote add upstream https://github.com/eyesore-/ledger`
+  ```
+  git remote add upstream https://github.com/eyesore-/ledger
+  ```
   - `upstream` will be the remote name.
 2. To pull from original repo whenever there is changes you will now run:
 `git pull upstream master`
