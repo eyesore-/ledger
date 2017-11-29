@@ -54,6 +54,8 @@ As we learn more and more about higher order functions I will be updating the re
   ```
   - `upstream` will be the remote name.
 2. To pull from original repo whenever there is changes you will now run:
-`git pull upstream master`
+```
+git pull upstream master
+```
   - All new changes will be brought down from the original changes and if there are no changes to files that you have changed then there will be no merge conflicts
   - When working on a project you want to pull often to make sure that you have the most up to date codebase locally.
