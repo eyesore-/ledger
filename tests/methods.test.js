@@ -59,3 +59,63 @@ describe('map', () => {
     expect(mappedNums).to.not.equal(numbers)
   })
 })
+describe('reduce', () => {
+  it('Should return a value', () => {
+    const result = reduce([1,2,3], function(accum, item) {return item})
+    expect(result).to.be.defined
+  })
+  it('Should not mutate the original array', () => {
+    const input = [1, 2, 3]
+    const result = reduce(input, function(accum, item) {return item})
+
+    expect(input).to.eql([1, 2, 3])
+  })
+  it('Should call callback with arguments (accumulator, currentValue)', () => {
+    const callbackAccum = ''
+    const callbackCurr = ''
+
+    reduce(['item'], function(accum, curr){
+      callbackAccum = accum
+      callbackCurr = curr
+    }, 'accumulator')
+
+    expect(callbackAccum).to.equal('accumulator')
+    expect(callbackCurr).to.equal('item')
+  })
+  it('Should pass items from array in order as it traverses left to right', () => {
+    const order = []
+    reduce([1, 2, 3, 4, 5], function(accum, item) {
+      order.push(item)
+    }, 0)
+
+    expect(order).to.eql([1, 2, 3, 4, 5])
+  })
+  it('Should pass all items of array when initialValue is passed in', () => {
+    const result = reduce([1, 2, 3], function(accum, item) {
+      return accum + item
+    }, 10)
+
+    expect(result).to.equal(16)
+  })
+  it('Should accept a falsy value as an initialValue', () => {
+    const result = reduce([1, 2, 3], function(accum, item) {
+      return accum * item
+    }, 0)
+
+    expect(result).to.equal(0)
+  })
+  it('Should set initialValue to first item in array if initalValue is not set', () => {
+    const result = reduce([1, 2, 3], function(accum, item) {
+      return accum
+    })
+
+    expect(result).to.equal(1)
+  })
+  it('Should pass second item in array to callback first if initialValue is not set', () => {
+    const result = reduce([1, 2, 3], function(accum, item) {
+      return accum + item
+    })
+
+    expect(result).to.equal(6)
+  })
+})
