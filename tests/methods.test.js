@@ -59,6 +59,38 @@ describe('map', () => {
     expect(mappedNums).to.not.equal(numbers)
   })
 })
+describe('filter', () => {
+  it('Should return new array', () => {
+    const input = [1, 2, 3, 4, 5]
+    const result = filter(input, function(item){
+      return item % 2 === 0
+    })
+
+    expect(result).to.not.equal(input)
+  })
+  it('Should return all even numbers', () => {
+    const result = filter([1, 2, 3, 4, 5], function(item){
+      return item % 2 === 0
+    })
+
+    expect(result).to.eql([2, 4])
+  })
+  it('Should return all odd numbers', () => {
+    const result = filter([1, 2, 3, 4, 5], function(item){
+      return item % 2 !== 0
+    })
+
+    expect(result).to.eql([1, 3, 5])
+  })
+  it('Should not mutate input array', () => {
+    const input = [1, 2, 3, 4, 5]
+    const result = filter(input, function(num){
+      return
+    })
+
+    expect(input).to.eql([1, 2, 3, 4, 5])
+  })
+})
 describe('reduce', () => {
   it('Should return a value', () => {
     const result = reduce([1,2,3], function(accum, item) {return item})
