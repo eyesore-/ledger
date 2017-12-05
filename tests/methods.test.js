@@ -94,7 +94,7 @@ describe('filter', () => {
 describe('reduce', () => {
   it('Should return a value', () => {
     const result = reduce([1,2,3], function(accum, item) {return item})
-    expect(result).to.be.defined
+    expect(result).to.not.be.undefined
   })
   it('Should not mutate the original array', () => {
     const input = [1, 2, 3]
@@ -103,8 +103,8 @@ describe('reduce', () => {
     expect(input).to.eql([1, 2, 3])
   })
   it('Should call callback with arguments (accumulator, currentValue)', () => {
-    const callbackAccum = ''
-    const callbackCurr = ''
+    let callbackAccum = ''
+    let callbackCurr = ''
 
     reduce(['item'], function(accum, curr){
       callbackAccum = accum
