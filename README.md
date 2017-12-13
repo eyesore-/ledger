@@ -63,3 +63,5 @@ git pull upstream master
 4. Once you write and save your `commit` message the new files will be merged into your local repo and you can start working on the method implementations.
 ---
 **P.S.** Have fun! 🎈
+
+🐕
