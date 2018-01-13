@@ -6,7 +6,7 @@
   "author": "Joel <joelbmolina@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha --watch"
+    "test": "mocha"
   },
   "dependencies": {},
   "devDependencies": {
