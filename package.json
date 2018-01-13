@@ -1,0 +1,16 @@
+{
+  "name": "ledger",
+  "version": "1.0.0",
+  "main": "",
+  "repository": "https://github.com/eyesore-/ledger.git",
+  "author": "Joel <joelbmolina@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}
