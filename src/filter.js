@@ -22,6 +22,21 @@ on each element and creates a new array based on a return values coerced to
 true from the callback function.
 */
 
-const filter = function(arr, callback){
-
+const filter = (arr, callback) => {
+  // establish new array
+  const result = []
+  // iterate through array passed in
+  for (let i = 0; i < arr.length; i++) {
+    // check to see if current item tests true
+    // with the callback that is passed
+    if (callback(arr[i], i, arr)) {
+      // if true push that item to new array
+      result.push(arr[i])
+    }
+  }
+  // returns the array created
+  return result
 }
+
+// export function for testing purposes
+module.exports = filter
