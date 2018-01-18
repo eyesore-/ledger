@@ -20,5 +20,17 @@ first argument
 */
 
 const map = function(arr, callback) {
-  // implement map here
+  // map creates a new array to return
+  const result = []
+  // iterate through the array that is passed in
+  for (let i = 0; i < arr.length; i++){
+    // call the callback with current item, index, and original array
+    // add the result from the callback to the created array
+    result.push(callback(arr[i], i, arr))
+  }
+  // return new array with new values
+  return result
 }
+
+// export for testing purposes
+module.exports = map
