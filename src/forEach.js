@@ -16,6 +16,15 @@ method we will be passing the input array as the
 first argument
 */
 
-const forEach = function(arr, callback) {
-  // implement forEach here
+const forEach = (arr, callback) => {
+  // iterate through the array passed in
+  for (let i = 0; i < arr.length; i++) {
+    // as we iterate we want to call the callback
+    // function on current item, index, and array passed in
+    callback(arr[i], i, arr)
+  }
+  // forEach does not return any value
 }
+
+// export for testing purposes
+module.exports = forEach
