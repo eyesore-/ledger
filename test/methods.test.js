@@ -157,3 +157,20 @@ describe('reduce', () => {
     expect(result).to.equal(6)
   })
 })
+describe('pipe', () => {
+  const pipe = require('../src/pipe')
+  it('Should be a variadic function', () => {
+    expect(pipe).to.be.a('function')
+    expect(pipe.length).to.equal(0)
+  })
+  it('Should return a function', () => {
+    const x = pipe(parseInt, x => x * 2)
+    expect(x).to.be.a('function')
+  })
+  it('Should iterate through functions left-to-right', () => {
+    const multi = x => x * 2
+    const add = y => y + 2
+    const result = pipe(multi, add)(2)
+    expect(result).to.equal(6)
+  })
+})
