@@ -19,3 +19,5 @@ Example:
 const pipe = function() {
   // implement pipe here
 }
+
+module.exports = pipe
