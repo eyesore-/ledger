@@ -1,4 +1,5 @@
 const expect = require('chai').expect
+const assert = require('assert')
 
 describe('forEach', () =>{
   const forEach = require('../src/forEach')
@@ -172,5 +173,16 @@ describe('pipe', () => {
     const add = y => y + 2
     const result = pipe(multi, add)(2)
     expect(result).to.equal(6)
+  })
+  it('Should be applied to one argument', () => {
+    const multi = x => x * 2
+    const pipedFunction = pipe(multi)
+    expect(pipedFunction(2)).to.equal(4)
+  })
+  it('Should throw error if no arguments are passed in', () => {
+    assert.throws( 
+      () => pipe(),
+      err => err.constructor === Error
+    )
   })
 })
